@@ -9,6 +9,8 @@ export default {
       colors: {
         primary: "#2A7DBC",
         secondary: "#f0f2f6",
+        greyPrimary: "#8B8B8B",
+        primayAlert: "#EB5757",
       },
     },
     container: {
