@@ -1,0 +1,15 @@
+{
+  "token": {
+    "colorPrimary": "#2a7dbc",
+    "colorInfo": "#2a7dbc"
+  },
+  "components": {
+    "Table": {
+      "headerBg": "rgb(42, 125, 188)",
+      "headerColor": "rgba(255, 251, 251, 0.88)",
+      "headerSortActiveBg": "rgb(42, 125, 188)",
+      "headerSortHoverBg": "rgb(42, 125, 188)",
+      "headerFilterHoverBg": "rgb(42, 125, 188)"
+    }
+  }
+}
