@@ -17,14 +17,16 @@ import {
   ORDERS_TABLE_CONSTANTS,
   Order,
 } from "../../../constants/ordersTableConstants";
+import { useNavigate } from "react-router-dom";
 
 const Orders = () => {
+  const navigate = useNavigate();
   const columns: TableProps<Order>["columns"] = [
     {
       title: "Order",
       dataIndex: "order",
       key: "order",
-      render: (text) => <a>{text}</a>,
+      render: (text) => <a onClick={()=> navigate(`/orders_management/orders/${text}`)}>{text}</a>,
     },
     {
       title: "Customer",
@@ -77,6 +79,9 @@ const Orders = () => {
       ),
     },
   ];
+
+
+
 
   return (
     <Col>
