@@ -13,7 +13,7 @@ export const notificationMenu: notificationItem[] = [
     notificationTitle: "JBasso",
     dateTime: "03/05/2024 12:54PM",
     notificationSubTitle: "General Category - R894216",
-    isRead: true,
+    isRead: false,
     notificationDescription:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
@@ -22,7 +22,7 @@ export const notificationMenu: notificationItem[] = [
     notificationTitle: "JBasso",
     dateTime: "03/05/2024 12:54PM",
     notificationSubTitle: "General Category - R894216",
-    isRead: true,
+    isRead: false,
     notificationDescription:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
@@ -31,7 +31,7 @@ export const notificationMenu: notificationItem[] = [
     notificationTitle: "JBasso",
     dateTime: "03/05/2024 12:54PM",
     notificationSubTitle: "General Category - R894216",
-    isRead: false,
+    isRead: true,
     notificationDescription:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
@@ -40,7 +40,7 @@ export const notificationMenu: notificationItem[] = [
     notificationTitle: "JBasso",
     dateTime: "03/05/2024 12:54PM",
     notificationSubTitle: "General Category - R894216",
-    isRead: false,
+    isRead: true,
     notificationDescription:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
@@ -49,7 +49,7 @@ export const notificationMenu: notificationItem[] = [
     notificationTitle: "JBasso",
     dateTime: "03/05/2024 12:54PM",
     notificationSubTitle: "General Category - R894216",
-    isRead: false,
+    isRead: true,
     notificationDescription:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },

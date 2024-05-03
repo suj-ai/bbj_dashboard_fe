@@ -18,12 +18,12 @@ function NotificationMenu() {
           <Col className="pt-[16px] pr-[16px] pb-[16px] pl-[16px] border-b border-b-[#BBBBBB] border-solid border-t-0 border-l-0 border-r-0 overflow-auto">
             <Row className="flex items-center justify-between">
               <div className="flex items-center">
-                {item?.isRead ? (
+                {item?.isRead ? null : (
                   <span className="w-[8px] h-[8px] rounded-[1000px] bg-primary"></span>
-                ) : null}
+                )}
                 <span
                   className={`text-black font-semibold text-base ${
-                    item?.isRead ? "pl-[10px]" : "pl-[16px]"
+                    item?.isRead ? "pl-[16px]" : "pl-[10px]"
                   }`}
                 >
                   {item?.notificationTitle}
