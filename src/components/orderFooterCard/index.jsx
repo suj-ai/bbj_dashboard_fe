@@ -4,7 +4,7 @@ import { IoCopyOutline, IoPrintOutline, IoSaveOutline } from "react-icons/io5";
 
 const OrderFooterComponent = () => {
   return (
-    <Col className="bg-white w-full h-[75px] p-[25px] shadow-md flex items-center justify-center gap-4">
+    <Col className="bg-white w-full h-[75px] p-[25px] flex items-center justify-center gap-4">
       <Col className="mr-[50px] flex gap-4">
         <Button type="default">Close</Button>
         <Button type="primary" icon={<IoSaveOutline />}>

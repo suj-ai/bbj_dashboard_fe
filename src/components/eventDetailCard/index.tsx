@@ -5,7 +5,7 @@ import BillingCheckBox from "../checkbox";
 
 const EventDetailCard = () => {
   return (
-    <Col className="p-4">
+    <Col>
       <Row justify="start" className="mb-3">
         <span className="font-semibold text-base">Event Details</span>
       </Row>
@@ -16,7 +16,10 @@ const EventDetailCard = () => {
             <span className="text-[14px] ml-[5px] mr-[5px]">:</span>
             <Select
               defaultValue="Unknown"
-              style={{ width: 250, height: 48 }}
+              style={{
+                width: 250,
+                height: 48,
+              }}
               //   onChange={handleChange}
               options={[
                 { value: "Unknown", label: "Unknown" },

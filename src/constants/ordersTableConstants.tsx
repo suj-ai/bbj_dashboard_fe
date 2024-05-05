@@ -135,6 +135,7 @@ export const ORDERS_TABLE_CONSTANTS: Order[] = [
 export interface orderTableHeader {
   id: number;
   item: string;
+  value?: string;
 }
 export const orderTableHeaderConstants = [
   {
@@ -144,6 +145,7 @@ export const orderTableHeaderConstants = [
   {
     id: 2,
     item: "Items",
+    value: "(03)",
   },
   {
     id: 3,
@@ -155,34 +157,39 @@ export const orderTableHeaderConstants = [
   },
   {
     id: 5,
-    item: "Discount",
+    item: "Discounts",
   },
   {
     id: 6,
-    item: "Total",
+    item: "Notes",
   },
   {
     id: 7,
-    item: "Production",
+    item: "Total",
+    value: "(05)",
   },
   {
     id: 8,
-    item: "Payment",
+    item: "Production",
   },
   {
     id: 9,
-    item: "Payment Link",
+    item: "Payment",
   },
   {
     id: 10,
-    item: "Fabrications",
+    item: "Payment Link",
   },
   {
     id: 11,
-    item: "Tracking",
+    item: "Fabrications",
   },
   {
     id: 12,
+    item: "Tracking",
+  },
+  {
+    id: 13,
     item: "Freight",
   },
 ];

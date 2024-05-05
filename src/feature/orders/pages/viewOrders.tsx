@@ -13,31 +13,36 @@ const ViewOrders = () => {
   const [selected, setSelected] = useState("General");
   return (
     <>
-      <Col className="p-4 bg-white w-full h-full flex flex-col gap-6 relative">
+      <Col className="bg-white w-full h-full flex flex-col gap-6">
         {/* First Row */}
-        <Row className="flex gap-6 h-[40%]">
+        <Row className="flex gap-6 h-[40%] p-4">
           <OrdersCard />
           <CustomerCard />
           <BillingCard />
         </Row>
         {/* Second Row */}
-        <Row className="h-[30%]">
+        <Row className="h-[30%] p-4">
           <EventDetailCard />
         </Row>
         {/* Third Row */}
-        <Row className="h-[30%] overflow-auto">
+        <Row className="h-[40%] overflow-auto">
           <Col className="w-full h-[52px] bg-primary flex">
             {orderTableHeaderConstants?.map((value: orderTableHeader) => (
               <span
-                className={`flex py-[24px] px-[15px] w-[150px] items-center justify-center text-[16px] text-white ${
+                className={`flex py-[24px] px-[10px] w-[130px] items-center justify-center text-[16px] text-white ${
                   selected === value?.item ? "bg-[#002B4C]" : null
                 }`}
               >
                 {value?.item}
+                {value?.item === "Notes" ? (
+                  <div className="w-[6px] h-[6px] rounded-[1000px] bg-yellow-100"></div>
+                ) : (
+                  <span className="text-yellow-100">{value?.value}</span>
+                )}
               </span>
             ))}
           </Col>
-          <Col className="overflow-auto flex w-full gap-6 p-4">
+          <Col className="flex w-full gap-6 p-4">
             <Col
               flex={8}
               className="border rounded-md shadow-md bg-white py-4 px-4 w-[30%] h-full "
@@ -145,9 +150,9 @@ const ViewOrders = () => {
             </Col>
           </Col>
         </Row>
-        <Col className="absolute bottom-[100px] w-[99%]">
+        <Row className="w-[99%] h-[30%]">
           <OrderFooterComponent />
-        </Col>
+        </Row>
       </Col>
     </>
   );
