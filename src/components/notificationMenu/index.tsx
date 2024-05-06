@@ -1,4 +1,4 @@
-import { Button, Col, Row, Skeleton } from "antd";
+import { Badge, Button, Col, Flex, Row, Skeleton } from "antd";
 import { notificationMenu } from "../../constants/notificationConstants";
 
 export interface notificationMenu {
@@ -8,15 +8,16 @@ export interface notificationMenu {
 function NotificationMenu({ isLoading }: notificationMenu) {
   return (
     <Col className="absolute bg-white w-[500px] h-[670px] top-[70px] right-[20px] z-20 rounded-lg drop-shadow-md">
-      <Col className="bg-primary rounded-t-lg relative">
+      <Flex
+        className="bg-primary rounded-t-lg relative py-4 gap-3"
+        align="center"
+      >
         <span className="text-white font-semibold text-base pl-[16px]">
           All Notifications
         </span>
-        <span className="w-[12px] h-[12px] rounded bg-primayAlert p-1 text-white text-[10px] ml-[10px]">
-          2
-        </span>
-        <div className="w-[20px] h-[20px] bg-primary absolute top-[-6px] bottom-0 rounded-[5px] origin-center rotate-45 left-[281px]"></div>
-      </Col>
+        <Badge count={2} />
+        {/* <div className="w-[20px] h-[20px] bg-primary absolute top-[-6px] bottom-0 rounded-[5px] origin-center rotate-45 left-[281px]"></div> */}
+      </Flex>
       <Col className="h-[510px] overflow-auto">
         {isLoading ? (
           <>
