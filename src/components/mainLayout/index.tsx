@@ -1,9 +1,9 @@
-import { Layout, theme } from "antd";
-import { useState } from "react";
-import LayoutSider from "../layoutSider";
-import LayoutHeader from "../layoutHeader";
-import { Outlet } from "react-router-dom";
-import { SIDENAV_CONSTANTS } from "../../constants/sidenavConstants";
+import { Layout, theme } from 'antd';
+import { useState } from 'react';
+import LayoutSider from '../layoutSider';
+import LayoutHeader from '../layoutHeader';
+import { Outlet } from 'react-router-dom';
+import { SIDENAV_CONSTANTS } from '../../constants/sidenavConstants';
 
 /**
  * MainLayout component for the application.
@@ -29,7 +29,7 @@ const MainLayout = () => {
       />
       <Layout>
         <LayoutHeader colorBgContainer={colorBgContainer} />
-        <Content className=" p-3 md:p-6 min-h-280 bg-secondary rounded-lg overflow-y-hidden">
+        <Content className=" p-3 md:p-6 min-h-280 bg-secondary rounded-lg">
           <Outlet />
         </Content>
       </Layout>
