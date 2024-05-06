@@ -1,11 +1,10 @@
-import { Col, DatePicker, Input, Row, Select } from "antd";
-import { CalenderIcon } from "../../assets/icons";
+import { Col, DatePicker, Form, Input, Row, Select } from "antd";
 import { FiCalendar } from "react-icons/fi";
 import BillingCheckBox from "../checkbox";
 
 const EventDetailCard = () => {
   return (
-    <Col>
+    <Form>
       <Row justify="start" className="mb-3">
         <span className="font-semibold text-base">Event Details</span>
       </Row>
@@ -116,7 +115,7 @@ const EventDetailCard = () => {
       <Row className="mt-[10px]">
         <BillingCheckBox text={"Recurring?"} />
       </Row>
-    </Col>
+    </Form>
   );
 };
 
