@@ -17,7 +17,11 @@ const Login = () => {
       <Row className=" bg-[#F0F6FB]  h-screen">
         <Col md={12} className="bg-loginImage bg-no-repeat bg-contain"></Col>
         <Col md={12} className="flex items-center justify-center ">
-          <Col md={10} className="bg-white drop-shadow-2xl   p-10 rounded-xl">
+          <Col
+            md={14}
+            lg={10}
+            className="bg-white drop-shadow-2xl   p-10 rounded-xl"
+          >
             <Col className="text-center text-3xl font-medium"> Welcome!</Col>
             <Row className="mt-5">
               <Col xl={24}>
