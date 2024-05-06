@@ -43,6 +43,7 @@ const Login = () => {
                 <Form.Item
                   name={["user", "password"]}
                   label="Password"
+                  rules={[{ required: true }]}
                   className="font-normal font-poppins"
                 >
                   <Input.Password
