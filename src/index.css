@@ -10,3 +10,8 @@ body {
   margin: 0;
   font-family: "Poppins", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}

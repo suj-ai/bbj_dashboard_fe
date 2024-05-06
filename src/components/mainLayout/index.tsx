@@ -1,8 +1,9 @@
-import { Layout, theme } from "antd";
 import { useState } from "react";
+import { Layout, theme } from "antd";
+import { Outlet } from "react-router-dom";
 import LayoutSider from "../layoutSider";
 import LayoutHeader from "../layoutHeader";
-import { Outlet } from "react-router-dom";
+import Layoutfooter from "../layoutFooter";
 import { SIDENAV_CONSTANTS } from "../../constants/sidenavConstants";
 
 /**
@@ -32,6 +33,7 @@ const MainLayout = () => {
         <Content className=" p-3 md:p-6 min-h-280 bg-secondary rounded-lg overflow-y-hidden">
           <Outlet />
         </Content>
+        <Layoutfooter />
       </Layout>
     </Layout>
   );
