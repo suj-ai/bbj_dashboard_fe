@@ -13,8 +13,8 @@ export default {
         primayAlert: "#EB5757",
       },
       backgroundImage: {
-        loginImage: "url('./public/Frame 1686560847.png')",
-        loginImagedummy: "url('./public/image 3.png')",
+        loginImage: "url('/Frame 1686560847.png')",
+        loginImagedummy: "url('/image 3.png')",
       },
     },
     container: {
