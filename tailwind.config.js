@@ -12,6 +12,10 @@ export default {
         greyPrimary: "#8B8B8B",
         primayAlert: "#EB5757",
       },
+      backgroundImage: {
+        loginImage: "url('./src/assets/images/Frame 1686560847.png')",
+        loginImagedummy: "url('./src/assets/images/image 3.png')",
+      },
     },
     container: {
       center: true,
