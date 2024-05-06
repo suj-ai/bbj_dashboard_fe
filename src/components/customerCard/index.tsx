@@ -9,7 +9,7 @@ const CustomerCard = () => {
       <Row justify="start" className="mb-6">
         <span className="font-medium">Customer Details</span>
       </Row>
-      <Flex justify="center" className="flex-col gap-5 ">
+      <Flex justify="center" className="flex-col gap-6 ">
         <Row>
           <Col span={8}>Customer</Col>
           <Col span={12}>: R963270</Col>
