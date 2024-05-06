@@ -4,15 +4,12 @@ const OrdersCard = () => {
   return (
     <Col
       flex={8}
-      className="border rounded-md shadow-md bg-white py-4 px-4 w-[30%] h-full "
+      className="border rounded-md shadow-md bg-white py-4 px-4 w-[30%]"
     >
       <Row justify="start" className="mb-6">
         <span className="font-medium">Order Details</span>
       </Row>
-      <Flex
-        justify="center"
-        className="flex-col justify-between h-[85%] gap-[8px]"
-      >
+      <Flex justify="center" className="flex-col gap-[14px]">
         <Row>
           <Col span={8}>Order</Col>
           <Col span={12}>: R963270</Col>
@@ -44,9 +41,9 @@ const OrdersCard = () => {
         <Row className="flex">
           <Col span={8}>Sample Order</Col>
           <Col span={12}>: </Col>
-        </Row>
-        <Row className=" flex justify-end">
-          <a>Edit</a>
+          <Col>
+            <a>Edit</a>
+          </Col>
         </Row>
       </Flex>
     </Col>

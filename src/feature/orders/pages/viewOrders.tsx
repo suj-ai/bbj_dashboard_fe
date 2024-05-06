@@ -9,23 +9,24 @@ import {
   orderTableHeaderConstants,
 } from "../../../constants/ordersTableConstants";
 import OrderFooterComponent from "../../../components/orderFooterCard";
+import BillingCheckBox from "../../../components/checkbox";
 const ViewOrders = () => {
   const [selected] = useState("General");
   return (
     <>
-      <Col className="bg-white w-full h-full flex flex-col gap-6">
+      <Col className="bg-white w-full h-full flex flex-col gap-6 overflow-y-auto shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
         {/* First Row */}
-        <Row className="flex gap-6 h-[40%] p-4">
+        <Row className="flex gap-6 p-4">
           <OrdersCard />
           <CustomerCard />
           <BillingCard />
         </Row>
         {/* Second Row */}
-        <Row className="h-[30%] p-4">
+        <Row className="p-4">
           <EventDetailCard />
         </Row>
         {/* Third Row */}
-        <Row className="h-[40%] overflow-auto">
+        <Row className="mb-[10px]">
           <Col className="w-full h-[52px] bg-primary flex">
             {orderTableHeaderConstants?.map((value: orderTableHeader) => (
               <span
@@ -47,8 +48,12 @@ const ViewOrders = () => {
               flex={8}
               className="border rounded-md shadow-md bg-white py-4 px-4 w-[30%] h-full "
             >
-              <Row justify="start" className="mb-6">
+              <Row justify="start" className="mb-6 flex justify-between">
                 <span className="font-medium">Pickup Details</span>
+                <Col>
+                  <BillingCheckBox text={"Same as Bill to "} />
+                  <BillingCheckBox text={"Auto pickup"} />
+                </Col>
               </Row>
               <Flex
                 justify="center"
@@ -82,8 +87,12 @@ const ViewOrders = () => {
               flex={8}
               className="border rounded-md shadow-md bg-white py-4 px-4 w-[30%] h-full "
             >
-              <Row justify="start" className="mb-6">
+              <Row justify="start" className="mb-6 flex justify-between">
                 <span className="font-medium">Pickup Details</span>
+                <Col>
+                  <BillingCheckBox text={"Same as Bill to "} />
+                  <BillingCheckBox text={"Auto pickup"} />
+                </Col>
               </Row>
               <Flex
                 justify="center"
@@ -117,8 +126,12 @@ const ViewOrders = () => {
               flex={8}
               className="border rounded-md shadow-md bg-white py-4 px-4 w-[30%] h-full "
             >
-              <Row justify="start" className="mb-6">
+              <Row justify="start" className="mb-6 flex justify-between">
                 <span className="font-medium">Pickup Details</span>
+                <Col>
+                  <BillingCheckBox text={"Same as Bill to "} />
+                  <BillingCheckBox text={"Auto pickup"} />
+                </Col>
               </Row>
               <Flex
                 justify="center"
@@ -150,7 +163,7 @@ const ViewOrders = () => {
             </Col>
           </Col>
         </Row>
-        <Row className="w-[99%] h-[30%]">
+        <Row className=" bottom-0 sticky">
           <OrderFooterComponent />
         </Row>
       </Col>
