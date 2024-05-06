@@ -1,6 +1,6 @@
 import { Col, Layout } from "antd";
 import { DownIcon, NotificationIcon, PersonImage } from "../../assets/icons";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import NotificationMenu from "../notificationMenu";
 import useOnClickOutside from "../../hooks/useOnClickOutside";
 
@@ -21,10 +21,17 @@ type LayoutHeaderProps = {
 
 const LayoutHeader = ({ colorBgContainer }: LayoutHeaderProps) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const notificationRef = useRef(null);
   useOnClickOutside(notificationRef, () => {
     setIsVisible(false);
   });
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(true);
+    }, 5000);
+  }, [isLoading]);
   return (
     <Header
       style={{ backgroundColor: colorBgContainer }}
@@ -53,7 +60,7 @@ const LayoutHeader = ({ colorBgContainer }: LayoutHeaderProps) => {
           </Col>
         </Col>
       </Col>
-      {isVisible ? <NotificationMenu /> : null}
+      {isVisible ? <NotificationMenu isLoading={isLoading} /> : null}
     </Header>
   );
 };
