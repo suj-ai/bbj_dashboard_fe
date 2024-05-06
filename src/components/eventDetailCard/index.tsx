@@ -8,7 +8,7 @@ const EventDetailCard = () => {
       <Row justify="start" className="mb-3">
         <span className="font-semibold text-base">Event Details</span>
       </Row>
-      <Row className="flex gap-10">
+      <Row className="flex gap-6">
         <Col>
           <Row className="flex items-center">
             <span className="text-[14px]">Event Category</span>
