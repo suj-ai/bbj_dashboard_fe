@@ -1,4 +1,8 @@
 import { Col, Layout } from "antd";
+import { DownIcon, NotificationIcon, PersonImage } from "../../assets/icons";
+import { useRef, useState } from "react";
+import NotificationMenu from "../notificationMenu";
+import useOnClickOutside from "../../hooks/useOnClickOutside";
 
 const { Header } = Layout;
 
@@ -16,16 +20,40 @@ type LayoutHeaderProps = {
 };
 
 const LayoutHeader = ({ colorBgContainer }: LayoutHeaderProps) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const notificationRef = useRef(null);
+  useOnClickOutside(notificationRef, () => {
+    setIsVisible(false);
+  });
   return (
     <Header
       style={{ backgroundColor: colorBgContainer }}
-      className="border-b border-gray-300 flex items-center "
+      className="border-b border-gray-300 flex items-center justify-between"
     >
       <Col>
         <span className="text-primary font-semibold text-xl">
           Welcome Back, Dev!
         </span>
       </Col>
+      <Col className="flex items-center justify-center">
+        <Col
+          className="flex items-center cursor-pointer"
+          onClick={() => (isVisible ? setIsVisible(false) : setIsVisible(true))}
+          ref={notificationRef}
+        >
+          <NotificationIcon />
+        </Col>
+        <Col className="flex items-center ml-[30px]">
+          <PersonImage />
+          <Col className="flex items-center ml-[10px]">
+            <span className="text-black font-semibold text-sm">Dev Team</span>
+            <div className="ml-[10px] flex items-center">
+              <DownIcon />
+            </div>
+          </Col>
+        </Col>
+      </Col>
+      {isVisible ? <NotificationMenu /> : null}
     </Header>
   );
 };

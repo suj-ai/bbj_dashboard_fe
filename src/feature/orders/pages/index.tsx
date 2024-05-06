@@ -110,7 +110,11 @@ const Orders = () => {
           </Space.Compact>
         </Space>
       </Flex>
-      <Table columns={columns} dataSource={ORDERS_TABLE_CONSTANTS} />
+      <Table
+        size="large"
+        columns={columns}
+        dataSource={ORDERS_TABLE_CONSTANTS}
+      />
     </Col>
   );
 };
