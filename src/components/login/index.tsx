@@ -1,12 +1,15 @@
 import { Button, Col, Form, Input, Row, Switch, Typography } from "antd";
 import { useContext } from "react";
 import { isAuthorised } from "../../routes";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const { setIsLoggedIn } = useContext(isAuthorised);
+  const navigate = useNavigate();
 
   const onFinish = () => {
     setIsLoggedIn(true);
+    navigate("/");
   };
 
   return (

@@ -8,6 +8,7 @@ import {
   Table,
   TableProps,
 } from "antd";
+import { LoadingOutlined } from "@ant-design/icons";
 import { IoPrintOutline } from "react-icons/io5";
 import { FiSearch } from "react-icons/fi";
 import { IoDocumentAttachOutline } from "react-icons/io5";
@@ -17,16 +18,32 @@ import {
   ORDERS_TABLE_CONSTANTS,
   Order,
 } from "../../../constants/ordersTableConstants";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Orders = () => {
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Simulate a fake loading process
+    const fakeLoader = setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+
+    return () => clearTimeout(fakeLoader); // Cleanup on unmount
+  }, []);
+
   const columns: TableProps<Order>["columns"] = [
     {
       title: "Order",
       dataIndex: "order",
       key: "order",
-      render: (text) => <a onClick={()=> navigate(`/orders_management/orders/${text}`)}>{text}</a>,
+      render: (text) => (
+        <a onClick={() => navigate(`/orders_management/orders/${text}`)}>
+          {text}
+        </a>
+      ),
     },
     {
       title: "Customer",
@@ -80,11 +97,13 @@ const Orders = () => {
     },
   ];
 
-
-
+  const tableLoading = {
+    spinning: loading,
+    indicator: <LoadingOutlined style={{ fontSize: "40px" }} />,
+  };
 
   return (
-    <Col>
+    <Col className="h-full">
       <Flex justify="center" className="mb-5">
         <Space direction="horizontal" size="middle" className="">
           <Space.Compact>
@@ -115,11 +134,14 @@ const Orders = () => {
           </Space.Compact>
         </Space>
       </Flex>
-      <Table
-        size="large"
-        columns={columns}
-        dataSource={ORDERS_TABLE_CONSTANTS}
-      />
+      <Col className="h-[calc(100%-100px)] overflow-x-auto">
+        <Table
+          loading={tableLoading}
+          size="large"
+          columns={columns}
+          dataSource={ORDERS_TABLE_CONSTANTS}
+        />
+      </Col>
     </Col>
   );
 };

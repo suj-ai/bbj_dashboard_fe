@@ -10,6 +10,8 @@ import {
   TableColumnsType,
 } from "antd";
 import { FiSearch } from "react-icons/fi";
+import { LoadingOutlined } from "@ant-design/icons";
+import { useEffect, useState } from "react";
 
 const { RangePicker } = DatePicker;
 interface DataType {
@@ -57,6 +59,16 @@ interface DataType {
 }
 
 const Availablity = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a fake loading process
+    const fakeLoader = setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+
+    return () => clearTimeout(fakeLoader); // Cleanup on unmount
+  }, []);
   const columns: TableColumnsType<DataType> = [
     {
       title: "Name",
@@ -263,6 +275,11 @@ const Availablity = () => {
     });
   }
 
+  const tableLoading = {
+    spinning: loading,
+    indicator: <LoadingOutlined style={{ fontSize: "40px" }} />,
+  };
+
   const expandedRowRender = () => {
     return (
       <Table
@@ -317,6 +334,7 @@ const Availablity = () => {
       </Flex>
       <Col className="h-[calc(100%-100px)] overflow-y-scroll">
         <Table
+          loading={tableLoading}
           scroll={{ x: 1500 }}
           columns={columns}
           expandable={{ expandedRowRender, defaultExpandedRowKeys: ["0"] }}
