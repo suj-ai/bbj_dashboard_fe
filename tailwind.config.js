@@ -10,6 +10,10 @@ export default {
         primary: "#2A7DBC",
         secondary: "#f0f2f6",
       },
+      backgroundImage: {
+        loginImage: "url('./src/assets/images/Frame 1686560847.png')",
+        loginImagedummy: "url('./src/assets/images/image 3.png')",
+      },
     },
     container: {
       center: true,

@@ -11,7 +11,7 @@ import { publicRoutes } from "./publicRoutes";
  */
 
 export const AppRoutes = () => {
-  const isAuthenticated = true;
+  const isAuthenticated = false;
 
   const routes = isAuthenticated ? protectedRoutes : publicRoutes;
 
