@@ -18,7 +18,7 @@ const Login = () => {
         <Col md={12} className="bg-loginImage bg-no-repeat bg-contain"></Col>
         <Col md={12} className="flex items-center justify-center ">
           <Col
-            md={14}
+            md={20}
             lg={10}
             className="bg-white drop-shadow-2xl   p-10 rounded-xl"
           >

@@ -292,7 +292,6 @@ const Availablity = () => {
               pagination={false}
             />
           ),
-          defaultExpandedRowKeys: ["0"],
         }}
         scroll={{ x: 1500 }}
         columns={columns}
@@ -337,7 +336,7 @@ const Availablity = () => {
           loading={tableLoading}
           scroll={{ x: 1500 }}
           columns={columns}
-          expandable={{ expandedRowRender, defaultExpandedRowKeys: ["0"] }}
+          expandable={{ expandedRowRender }}
           dataSource={data}
         />
       </Col>
