@@ -132,3 +132,64 @@ export const ORDERS_TABLE_CONSTANTS: Order[] = [
     taken_by: "Sky Indigo",
   },
 ];
+export interface orderTableHeader {
+  id: number;
+  item: string;
+  value?: string;
+}
+export const orderTableHeaderConstants = [
+  {
+    id: 1,
+    item: "General",
+  },
+  {
+    id: 2,
+    item: "Items",
+    value: "(03)",
+  },
+  {
+    id: 3,
+    item: "Shipping",
+  },
+  {
+    id: 4,
+    item: "Fulfilment",
+  },
+  {
+    id: 5,
+    item: "Discounts",
+  },
+  {
+    id: 6,
+    item: "Notes",
+  },
+  {
+    id: 7,
+    item: "Total",
+    value: "(05)",
+  },
+  {
+    id: 8,
+    item: "Production",
+  },
+  {
+    id: 9,
+    item: "Payment",
+  },
+  {
+    id: 10,
+    item: "Payment Link",
+  },
+  {
+    id: 11,
+    item: "Fabrications",
+  },
+  {
+    id: 12,
+    item: "Tracking",
+  },
+  {
+    id: 13,
+    item: "Freight",
+  },
+];
