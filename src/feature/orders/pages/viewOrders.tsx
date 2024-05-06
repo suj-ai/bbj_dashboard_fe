@@ -10,7 +10,7 @@ import {
 } from "../../../constants/ordersTableConstants";
 import OrderFooterComponent from "../../../components/orderFooterCard";
 const ViewOrders = () => {
-  const [selected, setSelected] = useState("General");
+  const [selected] = useState("General");
   return (
     <>
       <Col className="bg-white w-full h-full flex flex-col gap-6">
