@@ -1,8 +1,8 @@
-import { Col, Layout } from "antd";
-import { DownIcon, NotificationIcon, PersonImage } from "../../assets/icons";
-import { useEffect, useRef, useState } from "react";
-import NotificationMenu from "../notificationMenu";
-import useOnClickOutside from "../../hooks/useOnClickOutside";
+import { Col, Layout } from 'antd';
+import { DownIcon, NotificationIcon, PersonImage } from '../../assets/icons';
+import { useEffect, useRef, useState } from 'react';
+import NotificationMenu from '../notificationMenu';
+import useOnClickOutside from '../../hooks/useOnClickOutside';
 
 const { Header } = Layout;
 
@@ -38,7 +38,7 @@ const LayoutHeader = ({ colorBgContainer }: LayoutHeaderProps) => {
       className="border-b border-gray-300 flex items-center justify-between"
     >
       <Col>
-        <span className="text-primary font-semibold text-xl">
+        <span className="text-primary font-semibold text-xl max-sm:hidden">
           Welcome Back, Dev!
         </span>
       </Col>

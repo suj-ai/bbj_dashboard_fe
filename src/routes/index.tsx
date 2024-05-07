@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useRoutes } from "react-router-dom";
-import { protectedRoutes } from "./protectedRoutes";
-import { publicRoutes } from "./publicRoutes";
-import { createContext, useState } from "react";
+import { useRoutes } from 'react-router-dom';
+import { protectedRoutes } from './protectedRoutes';
+import { publicRoutes } from './publicRoutes';
+import { createContext, useState } from 'react';
 /**
  * The AppRoutes component that manages the routing of the application.
  * It uses the useSelector hook to check if the user is authenticated.
@@ -16,7 +16,7 @@ export const isAuthorised = createContext<any>(null);
 export const AppRoutes = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const routes = isLoggedIn ? protectedRoutes : publicRoutes;
+  const routes = true ? protectedRoutes : publicRoutes;
 
   const element = useRoutes([...routes]);
 

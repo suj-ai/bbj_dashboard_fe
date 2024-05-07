@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { Layout, theme } from "antd";
-import { Outlet } from "react-router-dom";
-import LayoutSider from "../layoutSider";
-import LayoutHeader from "../layoutHeader";
-import Layoutfooter from "../layoutFooter";
-import { SIDENAV_CONSTANTS } from "../../constants/sidenavConstants";
+import { useState } from 'react';
+import { Layout, theme } from 'antd';
+import { Outlet } from 'react-router-dom';
+import LayoutSider from '../layoutSider';
+import LayoutHeader from '../layoutHeader';
+import Layoutfooter from '../layoutFooter';
+import { SIDENAV_CONSTANTS } from '../../constants/sidenavConstants';
 
 /**
  * MainLayout component for the application.

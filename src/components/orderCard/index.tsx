@@ -1,6 +1,6 @@
-import { Col, Flex, Row } from "antd";
+import { Col, Flex, Row } from 'antd';
 
-const OrdersCard = () => {
+const OrderCard = () => {
   return (
     <Col
       flex={8}
@@ -50,4 +50,4 @@ const OrdersCard = () => {
   );
 };
 
-export default OrdersCard;
+export default OrderCard;
