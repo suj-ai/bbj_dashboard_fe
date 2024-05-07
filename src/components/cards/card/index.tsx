@@ -1,7 +1,7 @@
-import { Row } from 'antd';
+import { Card, Row } from 'antd';
 
 const CardComponent = ({ children }) => {
-  return <Row className="p-4">{children}</Row>;
+  return <Card>{children}</Card>;
 };
 
 export default CardComponent;
