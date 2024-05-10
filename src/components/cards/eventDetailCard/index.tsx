@@ -225,7 +225,7 @@ const EventDetailCard = () => {
             <Col
               xs={{ span: 10 }}
               md={{ span: 12 }}
-              lg={{ span: 8 }}
+              lg={{ span: 10 }}
               xl={{ span: 8 }}
             >
               <span className="text-sm">Deadline Date:</span>

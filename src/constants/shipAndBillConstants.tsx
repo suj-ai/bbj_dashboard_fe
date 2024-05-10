@@ -1,13 +1,10 @@
-import { BillingsDetailsCard } from '../components/billingCard';
+import { BillingsDetailsCard } from '../components/cards/billingCard';
 import { CustomerDetailsCard } from '../components/cards/customerCard';
 import { OrderDetailsCard } from '../components/cards/ordersCard';
 
-export interface ShippingDetails {
-  id: number;
-  value: JSX.Element;
-}
 
-export const SHIP_AND_BILL_DETAILS_CONSTANTS: ShippingDetails[] = [
+
+export const SHIP_AND_BILL_DETAILS_CONSTANTS = [
   {
     id: 1,
     value: <OrderDetailsCard />,

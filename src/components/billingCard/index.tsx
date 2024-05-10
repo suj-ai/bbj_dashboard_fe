@@ -45,8 +45,6 @@ const BillingCard = () => {
   );
 };
 
-export const BillingsDetailsCard = () => {
-  return <div>BillingsDetailsCard</div>;
-};
+
 
 export default BillingCard;

@@ -61,7 +61,7 @@ const LayoutSider: React.FC<LayoutSiderProps> = ({
       onCollapse={setCollapsed}
       trigger={null}
     >
-      <Col className="flex flex-col justify-between h-full relative ">
+      <Col className="flex flex-col justify-between h-full relative  ">
         <Col>
           <Row className="flex items-center justify-center">
             <h1 className="text-xl font-silkscreen">

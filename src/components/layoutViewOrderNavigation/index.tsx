@@ -1,5 +1,5 @@
 import { Tabs, Row, TabsProps } from 'antd';
-import { ShipAndBillDetails } from '../cards/cardDetails';
+import ShipAndBillDetails from '../cards/shipAndBillDetails';
 
 const ViewOrderNavigation = () => {
   const onChange = (key: string) => {
@@ -11,8 +11,8 @@ const ViewOrderNavigation = () => {
       key: '1',
       label: 'General',
       children: (
-        <Row className="flex flex-row w-screen">
-          {/* <ShipAndBillDetails /> */}
+        <Row className="flex flex-col w-[screen]">
+          <ShipAndBillDetails />
         </Row>
       ),
     },
@@ -80,9 +80,9 @@ const ViewOrderNavigation = () => {
 
   return (
     <Tabs
-      className=""
+      className="w-full"
       defaultActiveKey="1"
-      tabBarGutter={70}
+      tabBarGutter={40}
       items={items}
       onChange={onChange}
     />

@@ -68,6 +68,11 @@ export const SIDENAV_CONSTANTS: SidenavConstants = [
         label: "Availablity",
         path: "/inventory_maintainance/availablity",
       },
+      {
+        key: "viewAvailability",
+        label: "View Availability",
+        path: "/inventory_maintainance/viewavailability",
+      },
     ],
   },
 ];

@@ -1,6 +1,7 @@
 import { Card, Row, Col, Checkbox } from 'antd';
 import { Link } from 'react-router-dom';
 import CardComponent from '../card';
+import ShipAndBillCard from '../shipAndBillCard';
 
 const BillingsCard = () => {
   return (
@@ -65,6 +66,19 @@ const BillingsCard = () => {
       </Col>
     </CardComponent>
   );
+};
+
+export const BillingsDetailsCard = () => {
+  return <CardComponent>
+    <Col className="flex-col flex w-full  gap-2">
+      <Col className='flex justify-between'>
+        <span className="font-medium">Ship To</span>
+        <Checkbox>Same as Bill To</Checkbox>
+        <Checkbox>Same as Bill To</Checkbox>
+      </Col>
+      <ShipAndBillCard />
+    </Col>
+  </CardComponent>
 };
 
 export default BillingsCard;

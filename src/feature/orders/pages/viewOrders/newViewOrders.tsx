@@ -2,7 +2,7 @@ import { Col } from 'antd';
 import CardDetails from '../../../../components/cards/cardDetails';
 import EventDetailCard from '../../../../components/cards/eventDetailCard';
 import ViewOrderFooter from '../../../../components/layoutViewOrderFooter';
-import ShipAndBillDetails from '../../../../components/cards/shipAndBillDetails';
+import ViewOrderNavigation from '../../../../components/layoutViewOrderNavigation';
 
 const NewViewOrders = () => {
   return (
@@ -10,7 +10,7 @@ const NewViewOrders = () => {
       <CardDetails />
       <EventDetailCard />
       <ViewOrderFooter />
-      {/* <ViewOrderNavigation /> */}
+      <ViewOrderNavigation />
     </Col>
   );
 };

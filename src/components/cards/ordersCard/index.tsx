@@ -1,6 +1,7 @@
 import { Card, Col, Row } from 'antd';
 import { Link } from 'react-router-dom';
 import CardComponent from '../card';
+import ShipAndBillCard from '../shipAndBillCard';
 
 const OrdersCard = () => {
   return (
@@ -75,7 +76,15 @@ const OrdersCard = () => {
 };
 
 export const OrderDetailsCard = () => {
-  return <div>OrderDetailsCard</div>;
-};
+  return (
+    <CardComponent>
+      <Col className="flex-col flex w-full  gap-2">
+        <span className="font-medium">Bill To</span>
+        <ShipAndBillCard />
+      </Col>
+    </CardComponent>
+
+  )
+}
 
 export default OrdersCard;
