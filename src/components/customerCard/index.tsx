@@ -1,4 +1,4 @@
-import { Col, Flex, Row } from "antd";
+import { Col, Flex, Row } from 'antd';
 
 const CustomerCard = () => {
   return (

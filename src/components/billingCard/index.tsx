@@ -1,6 +1,6 @@
-import { Col, Flex, Row } from "antd";
-import { Link } from "react-router-dom";
-import BillingCheckBox from "../checkbox";
+import { Col, Flex, Row } from 'antd';
+import { Link } from 'react-router-dom';
+import BillingCheckBox from '../checkbox';
 
 const BillingCard = () => {
   return (
@@ -34,15 +34,19 @@ const BillingCard = () => {
         </Row>
       </Flex>
       <Row className="flex flex-row justify-between h-[5%] flex-nowrap">
-        <BillingCheckBox text={"Signed"} />
-        <BillingCheckBox text={"Commissionable"} />
-        <BillingCheckBox text={"Has Fabrication"} />
+        <BillingCheckBox text={'Signed'} />
+        <BillingCheckBox text={'Commissionable'} />
+        <BillingCheckBox text={'Has Fabrication'} />
         <Link to="" className="">
           Edit
         </Link>
       </Row>
     </Col>
   );
+};
+
+export const BillingsDetailsCard = () => {
+  return <div>BillingsDetailsCard</div>;
 };
 
 export default BillingCard;

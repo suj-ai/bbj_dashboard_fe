@@ -30,7 +30,7 @@ const MainLayout = () => {
       />
       <Layout>
         <LayoutHeader colorBgContainer={colorBgContainer} />
-        <Content className=" p-3 md:p-6 min-h-280 bg-secondary rounded-lg overflow-y-hidden">
+        <Content className=" p-3 md:p-6 min-h-280 bg-secondary rounded-lg overflow-scroll">
           <Outlet />
         </Content>
         <Layoutfooter />
