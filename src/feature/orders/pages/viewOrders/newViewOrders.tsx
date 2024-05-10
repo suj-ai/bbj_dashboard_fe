@@ -11,7 +11,6 @@ const NewViewOrders = () => {
       <EventDetailCard />
       <ViewOrderFooter />
       {/* <ViewOrderNavigation /> */}
-      <ShipAndBillDetails />
     </Col>
   );
 };
